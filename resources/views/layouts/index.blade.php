@@ -110,9 +110,9 @@
             </div>
         </nav>
 
-       
+
         <main>
-        <div class="sidebar">
+            <div class="sidebar">
                 <h2>Menú</h2>
                 <a href="#">Inicio</a>
                 <a href="#">Perfil</a>
