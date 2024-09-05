@@ -20,6 +20,36 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
     </script>
+
+    <style>
+    /* Estilo para la barra lateral */
+    .sidebar {
+        width: 250px;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: #343a40;
+        color: #fff;
+        padding: 20px;
+    }
+
+    .content {
+        margin-left: 250px;
+        padding: 20px;
+    }
+
+    .sidebar a {
+        color: #fff;
+        text-decoration: none;
+        display: block;
+        padding: 10px;
+    }
+
+    .sidebar a:hover {
+        background-color: #495057;
+    }
+    </style>
 </head>
 
 <body>
@@ -82,7 +112,13 @@
 
         <!-- <main class="py-4"> -->
         <main>
-            
+            <div class="sidebar">
+                <h2>Menú</h2>
+                <a href="#">Inicio</a>
+                <a href="#">Perfil</a>
+                <a href="#">Configuración</a>
+                <a href="#">Cerrar sesión</a>
+            </div>
             @yield('content')
         </main>
     </div>
