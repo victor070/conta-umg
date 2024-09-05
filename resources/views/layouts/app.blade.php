@@ -112,8 +112,7 @@
 
         <!-- <main class="py-4"> -->
         <main>
-            @guest
-            @if (!Route::has('login'))
+            
             <div class="sidebar">
                 <h2>Menú</h2>
                 <a href="#">Inicio</a>
@@ -121,8 +120,7 @@
                 <a href="#">Configuración</a>
                 <a href="#">Cerrar sesión</a>
             </div>
-            @endif
-            @endguest
+            
             @yield('content')
         </main>
     </div>
