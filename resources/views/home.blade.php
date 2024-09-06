@@ -29,7 +29,7 @@
 <!-- js -->
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script>
-const ctx = document.getElementById('myChart');
+const ctx = $('#myChart');
 
 new Chart(ctx, {
     type: 'bar',
@@ -50,4 +50,4 @@ new Chart(ctx, {
     }
 });
 </script>
-<script src="{{asset('assets/js/home.js')}}"></script>
+<!-- <script src="{{asset('assets/js/home.js')}}"></script> -->
