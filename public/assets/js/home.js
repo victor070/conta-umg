@@ -20,9 +20,8 @@ new Chart(ctx, {
 });
 
 const ctx2 = document.getElementById('myChart1');
-const labels = Utils.months({ count: 7 });
 const data = {
-    labels: labels,
+    labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
     datasets: [{
         label: 'My First Dataset',
         data: [65, 59, 80, 81, 56, 55, 40],
