@@ -1,38 +1,31 @@
 @extends('layouts.index')
 
 @section('content')
-<div class="container">
+<div class="container-fluid">
     <div class="row">
+        <h2>Dashboard</h2>
         <div class="col-6">
             <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
+                <div class="card-header"></div>
 
                 <div class="card-body">
-                    @if (session('status'))
-                    <div class="alert alert-success" role="alert">
-                        {{ session('status') }}
-                    </div>
-                    @endif
 
-                    {{ __('You are logged in!') }}
+                    <canvas id="myChart"></canvas>
                 </div>
             </div>
         </div>
         <div class="col-6">
             <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
+                <div class="card-header"></div>
 
                 <div class="card-body">
-                    @if (session('status'))
-                    <div class="alert alert-success" role="alert">
-                        {{ session('status') }}
-                    </div>
-                    @endif
-
-                    {{ __('You are logged in!') }}
+                    <canvas id="myChart"></canvas>
                 </div>
             </div>
         </div>
     </div>
 </div>
 @endsection
+
+<!-- js -->
+<script src="{{asset('assets/js/rifa/nuevo.js')}}"></script>
