@@ -112,15 +112,22 @@
 
 
         <main>
-            <div class="sidebar">
-                <h2>Menú</h2>
-                <a href="#">Inicio</a>
-                <a href="#">Perfil</a>
-                <a href="#">Configuración</a>
-                <a href="#">Cerrar sesión</a>
+            <div class="row">
+                <div class="col-2">
+                    <div class="sidebar">
+                        <h2>Menú</h2>
+                        <a href="#">Inicio</a>
+                        <a href="#">Perfil</a>
+                        <a href="#">Configuración</a>
+                        <a href="#">Cerrar sesión</a>
+                    </div>
+                </div>
+                <div class="col-10">
+                    @yield('content')
+                </div>
             </div>
 
-            @yield('content')
+
         </main>
     </div>
 </body>
