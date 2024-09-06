@@ -106,7 +106,7 @@
             </div>
         </div>
     </div>
-    @section('fin')
+    @yield('fin')
 </body>
 
 </html>
