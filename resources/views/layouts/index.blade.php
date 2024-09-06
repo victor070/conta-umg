@@ -33,10 +33,10 @@
         <div class="col-2">
             <div class="sidebar">
                 <h2>Menú</h2>
-                <a href="#">Inicio</a>
-                <a href="#">Perfil</a>
+                <a href="{{ url('/home')}}">Inicio</a>
+                <a href="{{ url('/')}}">Perfil</a>
                 <a href="#">Configuración</a>
-                <a href="#">Cerrar sesión</a>
+                
             </div>
         </div>
         <div class="col-10">
@@ -64,7 +64,7 @@
                                 @guest
                                 @if (Route::has('login'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Inicio de sesión') }}</a>
                                 </li>
                                 @endif
 
@@ -83,7 +83,7 @@
                                     <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                                         <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                                     document.getElementById('logout-form').submit();">
-                                            {{ __('Logout') }}
+                                            {{ __('Cerrar sesión') }}
                                         </a>
 
                                         <form id="logout-form" action="{{ route('logout') }}" method="POST"
