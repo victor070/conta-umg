@@ -28,4 +28,4 @@
 @endsection
 
 <!-- js -->
-<script src="{{asset('assets/js/rifa/nuevo.js')}}"></script>
+<script src="{{asset('assets/js/home')}}"></script>

@@ -39,7 +39,7 @@
         <div class="col-10">
             <div id="app">
                 <nav class="navbar navbar-expand-md navbar-light bg-white">
-                    <div class="">
+                    <div class="container-fluid">
                         <a class="navbar-brand" href="{{ url('/home') }}">
                             Sistema contabilidad
                         </a>
@@ -95,7 +95,7 @@
                     </div>
                 </nav>
 
-                <br><br><br>
+                <br>
                 <main class='ps-4' style=''>
 
                     @yield('content')
