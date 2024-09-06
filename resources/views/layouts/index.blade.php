@@ -20,41 +20,12 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
     </script>
-
-    <style>
-    /* Estilo para la barra lateral */
-    .sidebar {
-        width: 250px;
-        height: 100vh;
-        position: fixed;
-        top: 0;
-        left: 0;
-        background-color: #343a40;
-        color: #fff;
-        padding: 20px;
-    }
-
-    .content {
-        margin-left: 250px;
-        padding: 20px;
-    }
-
-    .sidebar a {
-        color: #fff;
-        text-decoration: none;
-        display: block;
-        padding: 10px;
-    }
-
-    .sidebar a:hover {
-        background-color: #495057;
-    }
-    </style>
+    <link rel="stylesheet" href="{{ asset('assets\index.css') }}">
 </head>
 
 <body>
     <div class="row">
-        <div class="col-2">
+        <div class="col-3">
             <div class="sidebar">
                 <h2>Menú</h2>
                 <a href="#">Inicio</a>
@@ -63,7 +34,7 @@
                 <a href="#">Cerrar sesión</a>
             </div>
         </div>
-        <div class="col-10">
+        <div class="col-9">
             <div id="app">
                 <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
                     <div class="container">
