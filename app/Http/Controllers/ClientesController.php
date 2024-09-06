@@ -10,7 +10,7 @@ use App\Models\Clientes;
 
 use DB;
 
-class ClinentesController extends Controller
+class ClientesController extends Controller
 {
     public function __construct()
     {
