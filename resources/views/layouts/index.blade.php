@@ -24,6 +24,8 @@
 
     <!-- css -->
     <link rel="stylesheet" href="{{ asset('assets\css\index.css') }}">
+    <!-- icon -->
+    <script src="https://unpkg.com/feather-icons"></script>
 
     @yield('header')
 </head>

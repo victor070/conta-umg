@@ -27,7 +27,7 @@
                 <td>{{ $cts->Nit }}</td>
                 <td>{{ $cts->CorreoElectronico }}</td>
                 <td>{{ $cts->telefono }}</td>
-                <td><a href="{{ url('clientes/edit/'.base64_encode($cts->ClienteID)) }}" class="btn btn-warning" title="Editar"><i class="ti-pencil"></i></a></td>
+                <td><a href="{{ url('clientes/edit/'.base64_encode($cts->ClienteID)) }}" class="btn btn-warning" title="Editar"><i data-feather="circle"></i></a></td>
             </tr>
             @endforeach
         </tbody>
