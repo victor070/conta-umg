@@ -22,12 +22,12 @@
             @foreach($clientes as $cts)
             <tr>
                 <td>{{ $cts->ClienteID }}</td>
-                <td>System Architect</td>
-                <td>Edinburgh</td>
-                <td>61</td>
-                <td>2011-04-25</td>
-                <td>$320,800</td>
-                <td>$320,800</td>
+                <td>{{ $cts->Nombre }}</td>
+                <td>{{ $cts->Direccion }}</td>
+                <td>{{ $cts->Nit }}</td>
+                <td>{{ $cts->CorreoElectronico }}</td>
+                <td>{{ $cts->telefono }}</td>
+                <td><a href="{{ url('clientes/edit/'.base64_encode($cts->ClienteID)) }}" class="btn btn-warning" title="Editar"><i class="ti-pencil"></i></a></td>
             </tr>
             @endforeach
         </tbody>
