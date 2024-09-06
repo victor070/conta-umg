@@ -29,8 +29,7 @@
 <!-- js -->
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script>
-const ctx = $('#myChart');
-
+let ctx = $("#mychart");
 new Chart(ctx, {
     type: 'bar',
     data: {
