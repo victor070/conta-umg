@@ -9,7 +9,6 @@
                 <div class="card-header"></div>
 
                 <div class="card-body">
-
                     <canvas id="myChart"></canvas>
                 </div>
             </div>
@@ -19,7 +18,7 @@
                 <div class="card-header"></div>
 
                 <div class="card-body">
-                    <canvas id="myChart"></canvas>
+                    <canvas id="myChart1"></canvas>
                 </div>
             </div>
         </div>
@@ -28,5 +27,4 @@
 @endsection
 
 <!-- js -->
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="{{asset('assets/js/home.js')}}"></script>
