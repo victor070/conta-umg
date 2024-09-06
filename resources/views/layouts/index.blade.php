@@ -26,7 +26,7 @@
 
 <body>
     <div class="row">
-        <div class="col-3">
+        <div class="col-2">
             <div class="sidebar">
                 <h2>Menú</h2>
                 <a href="#">Inicio</a>
@@ -35,7 +35,7 @@
                 <a href="#">Cerrar sesión</a>
             </div>
         </div>
-        <div class="col-9">
+        <div class="col-10">
             <div id="app">
                 <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
                     <div class="container">
