@@ -9,7 +9,9 @@
                 <div class="card-header"></div>
 
                 <div class="card-body">
-                    <canvas id="myChart"></canvas>
+                    <div>
+                        <canvas id="myChart"></canvas>
+                    </div>
                 </div>
             </div>
         </div>
@@ -18,7 +20,9 @@
                 <div class="card-header"></div>
 
                 <div class="card-body">
-                    <canvas id="myChart1"></canvas>
+                    <div>
+                        <canvas id="myChart1"></canvas>
+                    </div>
                 </div>
             </div>
         </div>
