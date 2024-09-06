@@ -37,10 +37,10 @@
         </div>
         <div class="col-10">
             <div id="app">
-                <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+                <nav class="navbar navbar-expand-md navbar-light bg-white">
                     <div class="container">
-                        <a class="navbar-brand" href="{{ url('/') }}">
-                            {{ config('app.name', 'Laravel') }}
+                        <a class="navbar-brand" href="{{ url('/home') }}">
+                            Sistema contabilidad
                         </a>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                             data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -95,7 +95,7 @@
                 </nav>
 
 
-                <main>
+                <main class='ps-4'>
 
                     @yield('content')
 
@@ -103,7 +103,6 @@
             </div>
         </div>
     </div>
-
 
 </body>
 
