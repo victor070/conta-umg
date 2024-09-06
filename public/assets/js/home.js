@@ -1,6 +1,7 @@
-
-const ctx = document.getElementById('myChart');
-
+$(document).ready(function() {
+    console.log("jQuery está funcionando");
+});
+let ctx = $("#mychart");
 new Chart(ctx, {
     type: 'bar',
     data: {
