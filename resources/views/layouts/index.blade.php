@@ -24,7 +24,8 @@
 
     <!-- css -->
     <link rel="stylesheet" href="{{ asset('assets\css\index.css') }}">
-
+    
+    @yield('header')
 </head>
 
 <body>
@@ -33,7 +34,9 @@
             <div class="sidebar">
                 <h2>Menú</h2>
                 <a href="{{ url('/home')}}">Inicio</a>
-                <a href="{{ url('/')}}">Perfil</a>
+                <a href="{{ url('/clientes')}}">Clientes</a>
+                <a href="{{ url('/')}}">Productos</a>
+                <a href="{{ url('/')}}">Ventas</a>
                 <a href="#">Configuración</a>
 
             </div>
