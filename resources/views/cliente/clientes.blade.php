@@ -28,7 +28,7 @@
                 <td>{{ $cts->CorreoElectronico }}</td>
                 <td>{{ $cts->Telefono }}</td>
                 <td><a href="{{ url('clientes/edit/'.base64_encode($cts->ClienteID)) }}" class="btn btn-warning"
-                        title="Editar"><i data-feather="edit"></i></a></td>
+                        title="Editar"><i class="bi bi-pencil-square"></i></a></td>
             </tr>
             @endforeach
         </tbody>

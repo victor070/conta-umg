@@ -24,8 +24,7 @@
 
     <!-- css -->
     <link rel="stylesheet" href="{{ asset('assets\css\index.css') }}">
-    <!-- icon -->
-    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+
     @yield('header')
 </head>
 
