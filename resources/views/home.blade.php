@@ -28,4 +28,4 @@
 @endsection
 
 <!-- js -->
-<script src="{{asset('assets/js/home')}}"></script>
+<script src="{{asset('assets/js/home.js')}}"></script>
