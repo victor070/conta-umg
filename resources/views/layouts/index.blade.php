@@ -24,7 +24,7 @@
 
     <!-- css -->
     <link rel="stylesheet" href="{{ asset('assets\css\index.css') }}">
-    
+
     @yield('header')
 </head>
 
@@ -101,10 +101,10 @@
                 </nav>
 
                 <br>
-                <main class='ps-4' style=''>
-
-                    @yield('content')
-
+                <main>
+                    <div class="conteiner-fluid">
+                        @yield('content')
+                    </div>
                 </main>
             </div>
         </div>
