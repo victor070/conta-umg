@@ -106,7 +106,7 @@
             </div>
         </div>
     </div>
-
+    @section('fin')
 </body>
 
 </html>
