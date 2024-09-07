@@ -1,12 +1,14 @@
 @extends('layouts.index')
 @section('header')
 <link rel="stylesheet" href="https://cdn.datatables.net/2.1.5/css/dataTables.dataTables.css" />
+<link rel="stylesheet" href="{{ asset('assets\css\clientes\index.css') }}">
 @endsection
 
-@section('content')
 <div class="container-fluid">
-    <h2>Clientes</h2><a href="{{ url('clientes/new/') }}" class="btn btn-success"
-    title="Editar"><i class="fas fa-user"></i></a>  
+    @section('content')
+    <div class="title">
+        <h2>Clientes</h2><a href="{{ url('clientes/new/') }}" class="btn btn-success" title="Editar"><i class="fa-solid fa-plus"></i></a>  
+    </div>
     <table id="example" class="display" style="width:100%">
         <thead>
             <tr>
@@ -29,7 +31,7 @@
                 <td>{{ $cts->CorreoElectronico }}</td>
                 <td>{{ $cts->Telefono }}</td>
                 <td><a href="{{ url('clientes/edit/'.base64_encode($cts->ClienteID)) }}" class="btn btn-warning"
-                        title="Editar"><i class="fas fa-user"></i></a></td>
+                        title="Editar"><i class="fa-solid fa-pen-to-square"></i></a></td>
             </tr>
             @endforeach
         </tbody>
