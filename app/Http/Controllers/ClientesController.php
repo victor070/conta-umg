@@ -24,5 +24,10 @@ class ClientesController extends Controller
         return view('cliente.clientes', compact('clientes'));
     }
 
+    public function new(){
+
+        return view('cliente.nuevo');
+    }
+
 
 }
