@@ -5,7 +5,8 @@
 
 @section('content')
 <div class="container-fluid">
-    <h2>Clientes</h2>
+    <h2>Clientes</h2><a href="{{ url('clientes/new/') }}" class="btn btn-success"
+    title="Editar"><i class="fas fa-user"></i></a>  
     <table id="example" class="display" style="width:100%">
         <thead>
             <tr>
