@@ -21,6 +21,7 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <!-- css -->
     <link rel="stylesheet" href="{{ asset('assets\css\index.css') }}">
@@ -30,6 +31,7 @@
 </head>
 
 <body>
+<input type="hidden" id="url_raiz_proyecto" value="{{ url('/') }}" />
     <div class="row">
         <div class="col-2">
             <div class="sidebar">
