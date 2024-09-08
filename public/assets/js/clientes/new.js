@@ -1,5 +1,5 @@
 let urlraiz = $("#url_raiz_proyecto").val();
-let miurl = urlraiz + "/cliente/add";
+let miurl = urlraiz + "/clientes/add";
 
 
 $("#newclient").on("submit", function (e) {
