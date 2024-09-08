@@ -56,5 +56,40 @@ class ClientesController extends Controller
 
     }
 
+    public function edit($id){
+
+        $cliente=DB::table('Cliente as cl')
+        ->where('cl.ClienteID','=',base64_decode($id))
+        ->get();
+        dd($cliente);
+        return view('cliente.edit', compact('cliente'));
+    }
+
+    public function update(Request $request){
+        try
+        {
+            DB::beginTransaction();
+
+                $cliente = new Clientes([
+                'Nombre'       => $request->get('Nombre'),
+                'Direccion'    => $request->get('Direccion'),
+                'Nit'          => $request->get('Nit'),
+                'CorreoElectronico' => $request->get('CorreoElectronico'),
+                'Telefono'     => $request->get('Telefono'),
+                'Estatus'      => $request-get('Estatus')
+            ]);
+
+            $cliente->save();
+
+            DB::commit();
+
+        }catch (\Exception $e){
+            DB::rollback();
+            return response()->json(array('error' => $e->errorInfo),404);
+        }
+        return response()->json(200);
+
+    }
+
 
 }
