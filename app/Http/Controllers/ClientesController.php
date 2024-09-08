@@ -39,7 +39,7 @@ class ClientesController extends Controller
                 'Direccion'    => $request->get('Direccion'),
                 'Nit'          => $request->get('Nit'),
                 'CorreoElectronico' => $request->get('CorreoElectronico'),
-                'Telefono'     => $request->get('telefono')
+                'Telefono'     => $request->get('Telefono')
             ]);
 
             $cliente->save();
@@ -50,7 +50,7 @@ class ClientesController extends Controller
             DB::rollback();
             return response()->json(array('error' => $e->errorInfo),404);
         }
-        return redirect('clientes');
+        return redirect()->route('clientes');
 
     }
 
