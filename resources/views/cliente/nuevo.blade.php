@@ -58,7 +58,7 @@
 @section('fin')
 @parent
 <!-- js -->
-
+<meta name="_token" content="{!! csrf_token() !!}" />
 <script src="{{asset('assets/js/clientes/new.js')}}"></script>
 
 @endsection
