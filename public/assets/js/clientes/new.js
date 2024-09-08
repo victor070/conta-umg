@@ -1,5 +1,5 @@
 let urlraiz = $("#url_raiz_proyecto").val();
-let miurl = urlraiz + "/rifa/agregar";
+let miurl = urlraiz + "/cliente/add";
 
 
 $("#newclient").on("submit", function (e) {
