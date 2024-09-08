@@ -50,7 +50,7 @@ class ClientesController extends Controller
             DB::rollback();
             return response()->json(array('error' => $e->errorInfo),404);
         }
-        return redirect()->route('clientes');
+        return back()->withInput();
 
     }
 
