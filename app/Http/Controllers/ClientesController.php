@@ -19,7 +19,9 @@ class ClientesController extends Controller
 
     public function index(){
 
-        $clientes=Clientes::all();
+        $clientes=DB::table('Cliente as cl')
+        ->where('cl.Estaus','=','1')
+        ->get();
 
         return view('cliente.clientes', compact('clientes'));
     }
