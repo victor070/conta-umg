@@ -45,10 +45,11 @@
             <div class="col-lg-4 col-md-4 col-xs-12">
                 <div class="form-group">
                     <label>Telefono <samp style='color:red'>*</samp></label>
-                    <input type="tel" min='1' class="form-control" id="Telefono" value='' required >
+                    <input type="tel" minlength="3" maxlength="8" class="form-control" id="Telefono" value='' required >
                 </div>
             </div>
         </div>
+        <br>
         <button type="submit" class="btn btn-primary">Guardar</button>
     </form>
 </div>

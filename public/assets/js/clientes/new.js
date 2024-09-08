@@ -5,15 +5,6 @@ let miurl = urlraiz + "/rifa/agregar";
 $("#newclient").on("submit", function (e) {
     e.preventDefault();
 
-    let counter = 0;
-
-    let start = parseInt(serie_inicial.val());
-    let end = parseInt(serie_final.val());
-
-    for (let i = start; i <= end; i++) {
-        counter++;
-    }
-
     let timerInterval;
     Swal.fire({
         title: "Generando Información",
