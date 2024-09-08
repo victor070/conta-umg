@@ -20,7 +20,7 @@ class ClientesController extends Controller
     public function index(){
 
         $clientes=DB::table('Cliente as cl')
-        ->where('cl.Estaus','=','1')
+        ->where('cl.Estatus','=','1')
         ->get();
 
         return view('cliente.clientes', compact('clientes'));
