@@ -47,6 +47,12 @@ $("#newclient").on("submit", function (e) {
         data: formData,
         success: function (data) {
             console.log(data)
+            if (data==200) {
+                window.location.href = urlraiz+'/clientes';
+                
+            } else {
+                console.log('error')
+            }
 
         }
     });
