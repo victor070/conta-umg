@@ -61,7 +61,6 @@ class ClientesController extends Controller
         $cliente=DB::table('Cliente as cl')
         ->where('cl.ClienteID','=',base64_decode($id))
         ->get();
-        dd($cliente);
         return view('cliente.edit', compact('cliente'));
     }
 
