@@ -52,9 +52,9 @@
             <div class="col-lg-3 col-md-6 col-xs-12">
                 <div class="form-group">
                     <label>Estatus <samp style='color:red'>*</samp></label>
-                    <select id="Estatus">
+                    <select class='form-select' id="Estatus" >
                         <option value="1" <?php echo ($cliente[0]->Estatus == '1'?'selected':'') ?>>Activo</option>
-                        <option value="0">Activo</option>
+                        <option value="0">Desactivado</option>
                     </select>
                 </div>
             </div>
