@@ -17,7 +17,8 @@ class Clientes extends Model
         'Direccion',
         'Nit',
         'CorreoElectronico',
-        'Telefono'
+        'Telefono',
+        'Estatus'
     ];
 }
 
