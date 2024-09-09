@@ -1,13 +1,13 @@
 let urlraiz = $("#url_raiz_proyecto").val();
-let miurl = urlraiz + "/clientes/add";
+let miurl = urlraiz + "/clientes/update";
 
 
-$("#newclient").on("submit", function (e) {
+$("#editclient").on("submit", function (e) {
     e.preventDefault();
 
     let timerInterval;
     Swal.fire({
-        title: "Guardando Información",
+        title: "Actualizando Información",
         html: "Se cerrara en <b></b> milisegundos.",
         timer: 2000,
         timerProgressBar: true,

@@ -69,16 +69,14 @@ class ClientesController extends Controller
         {
             DB::beginTransaction();
 
-                $cliente = new Clientes([
-                'Nombre'       => $request->get('Nombre'),
-                'Direccion'    => $request->get('Direccion'),
-                'Nit'          => $request->get('Nit'),
-                'CorreoElectronico' => $request->get('CorreoElectronico'),
-                'Telefono'     => $request->get('Telefono'),
-                'Estatus'      => $request-get('Estatus')
-            ]);
-
-            $cliente->save();
+            $cliente = Clientes::find($request->get('ClienteID'));
+            $cliente->cliente=$request->get('Nombre');
+            $cliente->Direccion=$request->get('Direccion');
+            $cliente->Nit=$request->get('Nit');
+            $cliente->CorreoElectronico=$request->get('CorreoElectronico');
+            $cliente->Telefono=$request->get('Telefono');
+            $cliente->Estatus=$request->get('Estatus');
+            $cliente->save();  
 
             DB::commit();
 

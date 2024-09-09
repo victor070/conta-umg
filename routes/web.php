@@ -15,6 +15,7 @@ Route::group(['prefix'=>'clientes'],function(){
 	Route::get('new','ClientesController@new');
 	Route::post('add','ClientesController@add');
 	Route::get('edit/{ids?}','ClientesController@edit');
+	Route::post('update','ClientesController@update');
 });
 
 
