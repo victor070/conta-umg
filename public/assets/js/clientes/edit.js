@@ -29,11 +29,13 @@ $("#editclient").on("submit", function (e) {
     });
 
     var formData = {
+        ClienteID: $("#ClienteID").val(),
         Nombre: $("#Nombre").val(),
         Direccion: $("#Direccion").val(),
         Nit: $("#Nit").val(),
         CorreoElectronico: $("#CorreoElectronico").val(),
-        Telefono: $("#Telefono").val()
+        Telefono: $("#Telefono").val(),
+        Estatus: $("Estatus").val()
     };
 
     $.ajaxSetup({
