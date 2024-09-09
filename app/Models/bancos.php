@@ -14,7 +14,7 @@ class Bancos extends Model
     protected $fillable = [
         'BancoID',
         'Nombre',
-        'SaldoCuentas',
+        'SaldosCuentas',
         'Estatus'
     ];
 }

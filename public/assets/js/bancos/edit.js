@@ -31,7 +31,7 @@ $("#editbanc").on("submit", function (e) {
     var formData = {
         ClienteID: $("#ClienteID").val(),
         Nombre: $("#Nombre").val(),
-        SaldoCuentas: $("#SaldoCuentas").val(),
+        SaldosCuentas: $("#SaldosCuentas").val(),
         Estatus: $("#Estatus").val()
     };
 
