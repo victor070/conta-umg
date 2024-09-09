@@ -10,7 +10,7 @@ use App\Models\Bancos;
 
 use DB;
 
-class BancoController extends Controller
+class BancosController extends Controller
 {
     public function __construct()
     {
