@@ -43,7 +43,7 @@ $("#newbanc").on("submit", function (e) {
         url: miurl,
         data: formData,
         success: function (data) {
-            console.log(data)
+            //console.log(data)
             if (data==200) {
                 window.location.href = urlraiz+'/bancos';
                 
