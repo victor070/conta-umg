@@ -70,6 +70,6 @@
 @parent
 <!-- js -->
 <meta name="_token" content="{!! csrf_token() !!}" />
-<script src="{{asset('assets/js/clientes/new.js')}}"></script>
+<script src="{{asset('assets/js/clientes/edit.js')}}"></script>
 
 @endsection
