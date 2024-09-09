@@ -12,6 +12,7 @@ class Clientes extends Model
     public $timestamps =false;
 
     protected $fillable = [
+        'ClienteID',
         'Nombre',
         'Direccion',
         'Nit',
