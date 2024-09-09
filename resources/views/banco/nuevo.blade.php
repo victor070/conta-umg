@@ -15,14 +15,14 @@
             <div class="col-lg-6 col-md-6 col-xs-12">
                 <div class="form-group">
                     <label>Nombre <samp style='color:red'>*</samp></label>
-                    <input type="text" class="form-control" id="Nombre" placeholder="Banco Industrial" value='' required>
+                    <input type="text" class="form-control" id="Nombre" placeholder="Banco Industrial" value='' required autofocus>
                 </div>
             </div>
 
             <div class="col-lg-6 col-md-6 col-xs-12"> 
                 <div class="form-group">
                     <label>Saldo <samp style='color:red'>*</samp></label>
-                    <input type="number" min='0' minlength="0" maxlength="8"  class="form-control" id="SaldosCuentas" value='' required autofocus
+                    <input type="number" min='0' minlength="0" maxlength="8"  class="form-control" id="SaldosCuentas" value='' required 
                         onkeydown="if(event.key==='.'){event.preventDefault();}"
                         oninput="event.target.value = event.target.value.replace(/[^0-9]*/g,'');">
                 </div>
