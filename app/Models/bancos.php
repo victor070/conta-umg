@@ -12,7 +12,7 @@ class Bancos extends Model
     public $timestamps =false;
 
     protected $fillable = [
-        'ClienteID',
+        'BancoID',
         'Nombre',
         'SaldoCuentas',
         'Estatus'
