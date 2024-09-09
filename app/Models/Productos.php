@@ -24,5 +24,4 @@ class Productos extends Model
         'CategoriaID ',
         'Estatus'
     ];
-    
 }
