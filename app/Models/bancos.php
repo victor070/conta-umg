@@ -17,4 +17,5 @@ class Bancos extends Model
         'SaldosCuentas',
         'Estatus'
     ];
+    
 }

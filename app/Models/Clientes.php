@@ -20,5 +20,6 @@ class Clientes extends Model
         'Telefono',
         'Estatus'
     ];
+    
 }
 
