@@ -18,4 +18,3 @@ class Bancos extends Model
         'Estatus'
     ];
 }
-
