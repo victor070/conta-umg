@@ -18,4 +18,19 @@ Route::group(['prefix'=>'clientes'],function(){
 	Route::post('update','ClientesController@update');
 });
 
+Route::group(['prefix'=>'bancos'],function(){
+	Route::get('','BancosController@index');
+	Route::get('new','BancosController@new');
+	Route::post('add','BancosController@add');
+	Route::get('edit/{ids?}','BancosController@edit');
+	Route::post('update','BancosController@update');
+});
+
+Route::group(['prefix'=>'productos'],function(){
+	Route::get('','ProductosController@index');
+	Route::get('new','ProductosController@new');
+	Route::post('add','ProductosController@add');
+	Route::get('edit/{ids?}','ProductosController@edit');
+	Route::post('update','ProductosController@update');
+});
 

@@ -4,20 +4,17 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Clientes extends Model
+class Bancos extends Model
 {
-    protected $table = 'Cliente';
-    protected $primaryKey = 'ClienteID';
+    protected $table = 'Banco';
+    protected $primaryKey = 'BancoID';
 
     public $timestamps =false;
 
     protected $fillable = [
         'ClienteID',
         'Nombre',
-        'Direccion',
-        'Nit',
-        'CorreoElectronico',
-        'Telefono',
+        'SaldoCuentas',
         'Estatus'
     ];
 }
