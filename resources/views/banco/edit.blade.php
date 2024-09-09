@@ -22,7 +22,7 @@
             <div class="col-lg-6 col-md-6 col-xs-12"> 
                 <div class="form-group">
                     <label>Saldo <samp style='color:red'>*</samp></label>
-                    <input type="number" min='0' minlength="3" maxlength="8"  class="form-control" id="SaldosCuentas" value='{{$banco[0]->SaldosCuentas}}' required autofocus
+                    <input type="number" min='0' minlength="0" maxlength="8"  class="form-control" id="SaldosCuentas" value='{{$banco[0]->SaldosCuentas}}' required autofocus
                         onkeydown="if(event.key==='.'){event.preventDefault();}"
                         oninput="event.target.value = event.target.value.replace(/[^0-9]*/g,'');">
                 </div>
