@@ -70,7 +70,7 @@ class ClientesController extends Controller
             DB::beginTransaction();
 
             $cliente = Clientes::find($request->get('ClienteID'));
-            $cliente->cliente=$request->get('Nombre');
+            $cliente->Nombre=$request->get('Nombre');
             $cliente->Direccion=$request->get('Direccion');
             $cliente->Nit=$request->get('Nit');
             $cliente->CorreoElectronico=$request->get('CorreoElectronico');
