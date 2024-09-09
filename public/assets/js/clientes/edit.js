@@ -35,7 +35,7 @@ $("#editclient").on("submit", function (e) {
         Nit: $("#Nit").val(),
         CorreoElectronico: $("#CorreoElectronico").val(),
         Telefono: $("#Telefono").val(),
-        Estatus: $("Estatus").val()
+        Estatus: $("#Estatus").val()
     };
 
     $.ajaxSetup({
