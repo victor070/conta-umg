@@ -30,7 +30,7 @@ $("#newbanc").on("submit", function (e) {
 
     var formData = {
         Nombre: $("#Nombre").val(),
-        SaldoCuentas: $("#SaldoCuentas").val()
+        SaldosCuentas: $("#SaldosCuentas").val()
     };
 
     $.ajaxSetup({

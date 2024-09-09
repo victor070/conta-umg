@@ -38,7 +38,7 @@ class BancosController extends Controller
 
                 $bancos = new Bancos([
                 'Nombre'       => $request->get('Nombre'),
-                'SaldoCuentas' => $request->get('SaldoCuentas')
+                'SaldosCuentas' => $request->get('SaldosCuentas')
             ]);
 
             $bancos->save();
@@ -68,7 +68,7 @@ class BancosController extends Controller
 
             $banco = Bancos::find($request->get('BancoID'));
             $banco->Nombre=$request->get('Nombre');
-            $banco->SaldoCuentas=$request->get('SaldoCuentas');
+            $banco->SaldosCuentas=$request->get('SaldosCuentas');
             $banco->Estatus=$request->get('Estatus');
             $banco->save();  
 
