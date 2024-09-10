@@ -1,8 +1,8 @@
 let urlraiz = $("#url_raiz_proyecto").val();
-let miurl = urlraiz + "/bancos/update";
+let miurl = urlraiz + "/proveedores/update";
 
 
-$("#editbanc").on("submit", function (e) {
+$("#edit").on("submit", function (e) {
     e.preventDefault();
 
     let timerInterval;
@@ -31,7 +31,10 @@ $("#editbanc").on("submit", function (e) {
     var formData = {
         BancoID: $("#BancoID").val(),
         Nombre: $("#Nombre").val(),
-        SaldosCuentas: $("#SaldosCuentas").val(),
+        Direccion: $("#Direccion").val(),
+        Nit: $("#Nit").val(),
+        CorreoElectronico: $("#CorreoElectronico").val(),
+        Telefono: $("#Telefono").val(),
         Estatus: $("#Estatus").val()
     };
 
@@ -47,7 +50,7 @@ $("#editbanc").on("submit", function (e) {
         success: function (data) {
             //console.log(data)
             if (data==200) {
-                window.location.href = urlraiz+'/bancos';
+                window.location.href = urlraiz+'/proveedores';
                 
             } else {
                 console.log('error')

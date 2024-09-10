@@ -1,8 +1,8 @@
 let urlraiz = $("#url_raiz_proyecto").val();
-let miurl = urlraiz + "/bancos/add";
+let miurl = urlraiz + "/proveedores/add";
 
 
-$("#newbanc").on("submit", function (e) {
+$("#new").on("submit", function (e) {
     e.preventDefault();
 
     let timerInterval;
@@ -30,7 +30,10 @@ $("#newbanc").on("submit", function (e) {
 
     var formData = {
         Nombre: $("#Nombre").val(),
-        SaldosCuentas: $("#SaldosCuentas").val()
+        Direccion: $("#Direccion").val(),
+        Nit: $("#Nit").val(),
+        CorreoElectronico: $("#CorreoElectronico").val(),
+        Telefono: $("#Telefono").val()
     };
 
     $.ajaxSetup({
