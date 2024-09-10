@@ -55,7 +55,7 @@ class BancosController extends Controller
 
     public function edit($id){
 
-        $banco=DB::table('banco as bn')
+        $banco=DB::table('Banco as bn')
         ->where('bn.BancoID','=',base64_decode($id))
         ->get();
         return view('banco.edit', compact('banco'));
