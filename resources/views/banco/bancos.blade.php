@@ -23,7 +23,7 @@
             <tr>
                 <td>{{ $bn->BancoID }}</td>
                 <td>{{ $bn->Nombre }}</td>
-                <td>{{ $bn->SaldosCuentas }}</td>
+                <td>{{ number_format($bn->SaldosCuentas,2,'.',',')  }}</td>
                 <td><a href="{{ url('bancos/edit/'.base64_encode($bn->BancoID)) }}" class="btn btn-warning"
                         title="Editar"><i class="fa-solid fa-pen-to-square"></i></a></td>
             </tr>
