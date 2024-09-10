@@ -6,11 +6,11 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 
-use App\Models\Productos; 
+use App\Models\Proveedores; 
 
 use DB;
 
-class ProductosController extends Controller
+class ProveedoresController extends Controller
 {
     public function __construct()
     {
@@ -19,16 +19,16 @@ class ProductosController extends Controller
 
     public function index(){
 
-        $clientes=DB::table('Producto as cl')
-        ->where('cl.Estatus','=','1')
+        $proveedores=DB::table('Proveedor as pv')
+        ->where('pv.Estatus','=','1')
         ->get();
 
-        return view('cliente.clientes', compact('clientes'));
+        return view('proveedor.proveedores', compact('proveedores'));
     }
 
     public function new(){
 
-        return view('cliente.nuevo');
+        return view('proveedor.nuevo');
     }
 
     public function add(Request $request){
@@ -36,7 +36,7 @@ class ProductosController extends Controller
         {
             DB::beginTransaction();
 
-                $cliente = new Clientes([
+                $proveedor = new Proveedores([
                 'Nombre'       => $request->get('Nombre'),
                 'Direccion'    => $request->get('Direccion'),
                 'Nit'          => $request->get('Nit'),
@@ -44,7 +44,7 @@ class ProductosController extends Controller
                 'Telefono'     => $request->get('Telefono')
             ]);
 
-            $cliente->save();
+            $proveedor->save();
 
             DB::commit();
 
@@ -58,10 +58,10 @@ class ProductosController extends Controller
 
     public function edit($id){
 
-        $cliente=DB::table('Cliente as cl')
-        ->where('cl.ClienteID','=',base64_decode($id))
+        $proveedor=DB::table('Proveedor as pv')
+        ->where('pv.ProveedorID','=',base64_decode($id))
         ->get();
-        return view('cliente.edit', compact('cliente'));
+        return view('proveedores.edit', compact('proveedor'));
     }
 
     public function update(Request $request){

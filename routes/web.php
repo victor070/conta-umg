@@ -26,6 +26,14 @@ Route::group(['prefix'=>'bancos'],function(){
 	Route::post('update','BancosController@update');
 });
 
+Route::group(['prefix'=>'proveedores'],function(){
+	Route::get('','ProveedoresController@index');
+	Route::get('new','ProveedoresController@new');
+	Route::post('add','ProveedoresController@add');
+	Route::get('edit/{ids?}','ProveedoresController@edit');
+	Route::post('update','ProveedoresController@update');
+});
+
 Route::group(['prefix'=>'productos'],function(){
 	Route::get('','ProductosController@index');
 	Route::get('new','ProductosController@new');

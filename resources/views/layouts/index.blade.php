@@ -39,7 +39,6 @@
                 <a href="{{ url('/home')}}">Inicio</a>
                 <a href="{{ url('/clientes')}}">Clientes</a>
                 <a href="{{ url('/bancos')}}">Bancos</a>
-                <a href="{{ url('/categorias')}}">Categorias</a>
                 <a href="{{ url('/proveedores')}}">Proveedores</a>
                 <a href="{{ url('/productos')}}">Productos</a>
                 <a href="{{ url('/')}}">Ventas</a>
