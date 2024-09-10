@@ -47,7 +47,7 @@ $("#editbanc").on("submit", function (e) {
         success: function (data) {
             //console.log(data)
             if (data==200) {
-                window.location.href = urlraiz+'/clientes';
+                window.location.href = urlraiz+'/bancos';
                 
             } else {
                 console.log('error')
