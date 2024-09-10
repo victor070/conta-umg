@@ -19,11 +19,19 @@
             </tr>
         </thead>
         <tbody>
-           
+            @foreach($bancos as $bn)
+            <tr>
+                <td>{{ $bn->BancoID }}</td>
+                <td></td>
+                <td></td>
+                <td><a href="{{ url('bancos/edit/'.base64_encode($bn->BancoID)) }}" class="btn btn-warning"
+                        title="Editar"><i class="fa-solid fa-pen-to-square"></i></a></td>
+            </tr>
+            @endforeach
         </tbody>
         <tfoot>
             <tr>
-            <th>ID</th>
+                <th>ID</th>
                 <th>Nombre</th>
                 <th>Saldo</th>
                 <th>Acciones</th>
