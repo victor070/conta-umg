@@ -1,30 +1,36 @@
 @extends('layouts.index')
 @section('header')
 <link rel="stylesheet" href="https://cdn.datatables.net/2.1.5/css/dataTables.dataTables.css" />
-<link rel="stylesheet" href="{{ asset('assets\css\bancos\index.css') }}">
+<link rel="stylesheet" href="{{ asset('assets\css\proveedores\index.css') }}">
 @endsection
 
 <div class="container-fluid">
     @section('content')
     <div class="title">
-        <h2>Bancos</h2>&nbsp;<a href="{{ url('bancos/new/') }}" class="btn btn-success" title="Agregar"><i class="fa-solid fa-plus"></i></a>  
+        <h2>Proveedores</h2>&nbsp;<a href="{{ url('proveedores/new/') }}" class="btn btn-success" title="Agregar"><i class="fa-solid fa-plus"></i></a>  
     </div>
     <table id="bancostb" class="display" style="width:100%">
         <thead>
             <tr>
                 <th>ID</th>
                 <th>Nombre</th>
-                <th>Saldo</th>
+                <th>Direccion</th>
+                <th>Nit</th>
+                <th>Correo</th>
+                <th>Telefono</th>
                 <th>Acciones</th>
             </tr>
         </thead>
         <tbody>
-            @foreach($bancos as $bn)
+            @foreach($proveedores as $pr)
             <tr>
-                <td>{{ $bn->BancoID }}</td>
-                <td>{{ $bn->Nombre }}</td>
-                <td>{{ number_format($bn->SaldosCuentas,2,'.',',')  }}</td>
-                <td><a href="{{ url('bancos/edit/'.base64_encode($bn->BancoID)) }}" class="btn btn-warning"
+                <td>{{ $pr->ProveedorID }}</td>
+                <td>{{ $pr->Nombre }}</td>
+                <td>{{ $pr->Direccion }}</td>
+                <td>{{ $pr->Nit }}</td>
+                <td>{{ $pr->CorreoElectronico }}</td>
+                <td>{{ $pr->Telefono }}</td>
+                <td><a href="{{ url('bancos/edit/'.base64_encode($pr->ProveedorID)) }}" class="btn btn-warning"
                         title="Editar"><i class="fa-solid fa-pen-to-square"></i></a></td>
             </tr>
             @endforeach
@@ -33,7 +39,10 @@
             <tr>
                 <th>ID</th>
                 <th>Nombre</th>
-                <th>Saldo</th>
+                <th>Direccion</th>
+                <th>Nit</th>
+                <th>Correo</th>
+                <th>Telefono</th>
                 <th>Acciones</th>
             </tr>
         </tfoot>
@@ -46,6 +55,6 @@
 <!-- js -->
 <script src="https://cdn.datatables.net/2.1.5/js/dataTables.js"></script>
 
-<script src="{{asset('assets/js/bancos/index.js')}}"></script>
+<script src="{{asset('assets/js/proveedores/index.js')}}"></script>
 
 @endsection

@@ -19,7 +19,7 @@ class ProductosController extends Controller
 
     public function index(){
 
-        $clientes=DB::table('Producto as cl')
+        $clientes=DB::table('Cliente as cl')
         ->where('cl.Estatus','=','1')
         ->get();
 
