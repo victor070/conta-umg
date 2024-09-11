@@ -1,5 +1,5 @@
 let urlraiz = $("#url_raiz_proyecto").val();
-let miurl = urlraiz + "/proveedores/update";
+let miurl = urlraiz + "/productos/update";
 
 
 $("#edit").on("submit", function (e) {
@@ -29,12 +29,16 @@ $("#edit").on("submit", function (e) {
     });
 
     var formData = {
-        ProveedorID: $("#ProveedorID").val(),
+        ProductoID: $("#ProductoID").val(),
         Nombre: $("#Nombre").val(),
-        Direccion: $("#Direccion").val(),
-        Nit: $("#Nit").val(),
-        CorreoElectronico: $("#CorreoElectronico").val(),
-        Telefono: $("#Telefono").val(),
+        CodigoProducto: $("#CodigoProducto").val(),
+        DescripcionDetallada: $("#DescripcionDetallada").val(),
+        PrecioCompra: $("#PrecioCompra").val(),
+        PrecioVenta: $("#PrecioVenta").val(),
+        ImpuestosAplicables: $("#ImpuestosAplicables").val(),
+        ProveedorID: $("#ProveedorID").val(),
+        StockMinimo: $("#StockMinimo").val(),
+        StockMaximo: $("#StockMaximo").val(),
         Estatus: $("#Estatus").val()
     };
 
@@ -50,7 +54,7 @@ $("#edit").on("submit", function (e) {
         success: function (data) {
             //console.log(data)
             if (data==200) {
-                window.location.href = urlraiz+'/proveedores';
+                window.location.href = urlraiz+'/productos';
                 
             } else {
                 console.log('error')
