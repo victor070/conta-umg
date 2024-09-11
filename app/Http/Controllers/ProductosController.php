@@ -72,7 +72,12 @@ class ProductosController extends Controller
         $producto=DB::table('Producto as pr')
         ->where('pr.ProductoID','=',base64_decode($id))
         ->get();
-        return view('producto.edit', compact('producto'));
+
+        $proveedores=DB::table('Proveedor as pv')
+        ->where('pv.Estatus','=','1')
+        ->get();
+
+        return view('producto.edit', compact('producto','proveedores'));
     }
 
     public function update(Request $request){

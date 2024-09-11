@@ -15,7 +15,7 @@
             <div class="col-lg-4 col-md-6 col-xs-12">
                 <div class="form-group">
                     <label>Nombre <samp style='color:red'>*</samp></label>
-                    <input type="text" class="form-control" id="Nombre" placeholder="Proveedores" value='' required
+                    <input type="text" class="form-control" id="Nombre" placeholder="Producto" value='' required
                         autofocus>
                 </div>
             </div>
@@ -103,6 +103,6 @@
 @parent
 <!-- js -->
 <meta name="_token" content="{!! csrf_token() !!}" />
-<script src="{{asset('assets/js/proveedores/new.js')}}"></script>
+<script src="{{asset('assets/js/productos/new.js')}}"></script>
 
 @endsection

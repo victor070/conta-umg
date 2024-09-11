@@ -7,7 +7,7 @@
 <div class="container-fluid">
     @section('content')
     <div class="title">
-        <h2>Proveedores</h2>&nbsp;<a href="{{ url('productos/new/') }}" class="btn btn-success" title="Agregar"><i
+        <h2>Productos</h2>&nbsp;<a href="{{ url('productos/new/') }}" class="btn btn-success" title="Agregar"><i
                 class="fa-solid fa-plus"></i></a>
     </div>
     <table id="bancostb" class="display" style="width:100%">
