@@ -23,7 +23,7 @@
             <div class="col-lg-4 col-md-6 col-xs-12">
                 <div class="form-group">
                     <label>Codigo Producto <samp style='color:red'>*</samp></label>
-                    <input type="text" class="form-control" id="CodigoProducto" inlength="3" maxlength="8" value=""
+                    <input type="text" class="form-control" id="CodigoProducto" inlength="3" maxlength="8" value="{{ $producto[0]->CodigoProducto }}"
                         required>
                 </div>
             </div>
@@ -31,7 +31,7 @@
             <div class="col-lg-4 col-md-6 col-xs-12">
                 <div class="form-group">
                     <label>Descripcion <samp style='color:red'>*</samp></label>
-                    <input type="text" class="form-control" id="DescripcionDetallada" value="" required>
+                    <input type="text" class="form-control" id="DescripcionDetallada" value="{{ $producto[0]->DescripcionDetallada }}" required>
                 </div>
             </div>
 
@@ -39,7 +39,7 @@
                 <div class="form-group">
                     <label>Precio Compra <samp style='color:red'>*</samp></label>
                     <input type="number" min='0' minlength="1" maxlength="8" class="form-control" id="PrecioCompra"
-                        value='' required onkeydown="if(event.key==='.'){event.preventDefault();}"
+                        value='{{ $producto[0]->PrecioCompra }}' required onkeydown="if(event.key==='.'){event.preventDefault();}"
                         oninput="event.target.value = event.target.value.replace(/[^0-9]*/g,'');">
                 </div>
             </div>
@@ -48,7 +48,7 @@
                 <div class="form-group">
                     <label>Precio Venta <samp style='color:red'>*</samp></label>
                     <input type="number" min='0' minlength="1" maxlength="8" class="form-control" id="PrecioVenta"
-                        value='' required onkeydown="if(event.key==='.'){event.preventDefault();}"
+                        value='{{ $producto[0]->PrecioVenta }}' required onkeydown="if(event.key==='.'){event.preventDefault();}"
                         oninput="event.target.value = event.target.value.replace(/[^0-9]*/g,'');">
                 </div>
             </div>
@@ -57,7 +57,7 @@
                 <div class="form-group">
                     <label>Impuestos<samp style='color:red'>*</samp></label>
                     <input type="number" min='0' minlength="1" maxlength="8" class="form-control"
-                        id="ImpuestosAplicables" value='' required
+                        id="ImpuestosAplicables" value='{{ $producto[0]->ImpuestosAplicables }}' required
                         onkeydown="if(event.key==='.'){event.preventDefault();}"
                         oninput="event.target.value = event.target.value.replace(/[^0-9]*/g,'');">
                 </div>
@@ -79,7 +79,7 @@
             <div class="col-lg-4 col-md-4 col-xs-12">
                 <div class="form-group">
                     <label>Stock Minimo<samp style='color:red'>*</samp></label>
-                    <input type="number" min='0' minlength="1" class="form-control" id="StockMinimo" value='' required
+                    <input type="number" min='0' minlength="1" class="form-control" id="StockMinimo" value='{{ $producto[0]->StockMinimo }}' required
                         onkeydown="if(event.key==='.'){event.preventDefault();}"
                         oninput="event.target.value = event.target.value.replace(/[^0-9]*/g,'');">
                 </div>
@@ -88,7 +88,7 @@
             <div class="col-lg-4 col-md-4 col-xs-12">
                 <div class="form-group">
                     <label>StockMaximo<samp style='color:red'>*</samp></label>
-                    <input type="number" min='0' minlength="1" class="form-control" id="StockMaximo" value='' required
+                    <input type="number" min='0' minlength="1" class="form-control" id="StockMaximo" value='{{ $producto[0]->StockMaximo }}' required
                         onkeydown="if(event.key==='.'){event.preventDefault();}"
                         oninput="event.target.value = event.target.value.replace(/[^0-9]*/g,'');">
                 </div>
