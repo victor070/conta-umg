@@ -48,7 +48,7 @@ $("#new").on("submit", function (e) {
         success: function (data) {
             //console.log(data)
             if (data==200) {
-                window.location.href = urlraiz+'/bancos';
+                window.location.href = urlraiz+'/proveedores';
                 
             } else {
                 console.log('error')
