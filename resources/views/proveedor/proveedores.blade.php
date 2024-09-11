@@ -30,7 +30,7 @@
                 <td>{{ $pr->Nit }}</td>
                 <td>{{ $pr->CorreoElectronico }}</td>
                 <td>{{ $pr->Telefono }}</td>
-                <td><a href="{{ url('bancos/edit/'.base64_encode($pr->ProveedorID)) }}" class="btn btn-warning"
+                <td><a href="{{ url('proveedores/edit/'.base64_encode($pr->ProveedorID)) }}" class="btn btn-warning"
                         title="Editar"><i class="fa-solid fa-pen-to-square"></i></a></td>
             </tr>
             @endforeach
