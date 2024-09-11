@@ -61,7 +61,7 @@ class ProveedoresController extends Controller
         $proveedor=DB::table('Proveedor as pv')
         ->where('pv.ProveedorID','=',base64_decode($id))
         ->get();
-        return view('proveedores.edit', compact('proveedor'));
+        return view('proveedor.edit', compact('proveedor'));
     }
 
     public function update(Request $request){
