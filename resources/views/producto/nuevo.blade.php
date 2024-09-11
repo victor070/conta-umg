@@ -7,7 +7,7 @@
 <div class="container-fluid">
     @section('content')
     <div class="title">
-        <h2>Nuevo Proveedor</h2>
+        <h2>Nuevo Producto</h2>
     </div>
     <form method="POST" enctype="multipart/form-data" id='new'>
         <div class="row">
