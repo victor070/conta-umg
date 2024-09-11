@@ -19,16 +19,22 @@ class ProductosController extends Controller
 
     public function index(){
 
-        $clientes=DB::table('Cliente as cl')
-        ->where('cl.Estatus','=','1')
+        $productos=DB::table('Producto as pr')
+        ->join('Proveedor as pv', 'pr.ProveedorID', '=', 'pv.ProveedorID')
+        ->select('pr.*', 'pv.Nombre as Proveedor')
+        ->where('pr.Estatus','=','1')
         ->get();
 
-        return view('cliente.clientes', compact('clientes'));
+        return view('producto.productos', compact('productos'));
     }
 
     public function new(){
 
-        return view('cliente.nuevo');
+        $proveedores=DB::table('Proveedor as pv')
+        ->where('pv.Estatus','=','1')
+        ->get();
+
+        return view('producto.nuevo', compact('proveedores'));
     }
 
     public function add(Request $request){
@@ -36,15 +42,20 @@ class ProductosController extends Controller
         {
             DB::beginTransaction();
 
-                $cliente = new Clientes([
-                'Nombre'       => $request->get('Nombre'),
-                'Direccion'    => $request->get('Direccion'),
-                'Nit'          => $request->get('Nit'),
-                'CorreoElectronico' => $request->get('CorreoElectronico'),
-                'Telefono'     => $request->get('Telefono')
+                $producto = new Productos([
+                'CodigoProducto'       => $request->get('CodigoProducto'),
+                'Nombre'               => $request->get('Nombre'),
+                'DescripcionDetallada' => $request->get('DescripcionDetallada'),
+                'PrecioCompra'         => $request->get('PrecioCompra'),
+                'PrecioVenta'          => $request->get('PrecioVenta'),
+                'ImpuestosAplicables'  => $request->get('ImpuestosAplicables'),
+                'ProveedorID'          => $request->get('ProveedorID'),
+                'StockMinimo'          => $request->get('StockMinimo'),
+                'StockMaximo'          => $request->get('StockMaximo'),
+                'ImpuestosAplicables'  => $request->get('ImpuestosAplicables')
             ]);
 
-            $cliente->save();
+            $producto->save();
 
             DB::commit();
 
@@ -58,10 +69,10 @@ class ProductosController extends Controller
 
     public function edit($id){
 
-        $cliente=DB::table('Cliente as cl')
-        ->where('cl.ClienteID','=',base64_decode($id))
+        $producto=DB::table('Producto as pr')
+        ->where('pr.ProductoID','=',base64_decode($id))
         ->get();
-        return view('cliente.edit', compact('cliente'));
+        return view('producto.edit', compact('producto'));
     }
 
     public function update(Request $request){
@@ -69,14 +80,18 @@ class ProductosController extends Controller
         {
             DB::beginTransaction();
 
-            $cliente = Clientes::find($request->get('ClienteID'));
-            $cliente->Nombre=$request->get('Nombre');
-            $cliente->Direccion=$request->get('Direccion');
-            $cliente->Nit=$request->get('Nit');
-            $cliente->CorreoElectronico=$request->get('CorreoElectronico');
-            $cliente->Telefono=$request->get('Telefono');
-            $cliente->Estatus=$request->get('Estatus');
-            $cliente->save();  
+            $producto = Productos::find($request->get('productoID'));
+            $producto->Nombre               = $request->get('Nombre');
+            $producto->CodigoProducto       = $request->get('CodigoProducto');
+            $producto->DescripcionDetallada = $request->get('DescripcionDetallada');
+            $producto->PrecioCompra         = $request->get('PrecioCompra');
+            $producto->PrecioVenta          = $request->get('PrecioVenta');
+            $producto->ImpuestosAplicables  = $request->get('ImpuestosAplicables');
+            $producto->ProveedorID          = $request->get('ProveedorID');
+            $producto->StockMinimo          = $request->get('StockMinimo');
+            $producto->StockMaximo          = $request->get('StockMaximo');
+            $producto->Estatus              = $request->get('Estatus');
+            $producto->save();  
 
             DB::commit();
 

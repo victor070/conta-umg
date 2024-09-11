@@ -13,6 +13,7 @@ class Productos extends Model
 
     protected $fillable = [
         'ProductoID',
+        'Nombre',
         'CodigoProducto',
         'DescripcionDetallada',
         'PrecioCompra',
@@ -21,7 +22,6 @@ class Productos extends Model
         'ProveedorID',
         'StockMinimo',
         'StockMaximo',
-        'CategoriaID ',
         'Estatus'
     ];
 }
