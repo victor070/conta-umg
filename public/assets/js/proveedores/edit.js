@@ -29,7 +29,7 @@ $("#edit").on("submit", function (e) {
     });
 
     var formData = {
-        BancoID: $("#BancoID").val(),
+        ProveedorID: $("#ProveedorID").val(),
         Nombre: $("#Nombre").val(),
         Direccion: $("#Direccion").val(),
         Nit: $("#Nit").val(),
