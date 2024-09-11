@@ -69,7 +69,7 @@ class ProveedoresController extends Controller
         {
             DB::beginTransaction();
 
-            $cliente = Clientes::find($request->get('ClienteID'));
+            $cliente = Proveedores::find($request->get('ProveedorID'));
             $cliente->Nombre=$request->get('Nombre');
             $cliente->Direccion=$request->get('Direccion');
             $cliente->Nit=$request->get('Nit');
