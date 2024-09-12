@@ -86,16 +86,16 @@ class ProductosController extends Controller
             DB::beginTransaction();
 
             $producto = Productos::find($request->get('productoID'));
-            $producto->CodigoProducto       = $request->get('CodigoProducto');
-            $producto->Nombre               = $request->get('Nombre');
+            $producto->CodigoProducto = $request->get('CodigoProducto');
+            $producto->Nombre = $request->get('Nombre');
             $producto->DescripcionDetallada = $request->get('DescripcionDetallada');
-            $producto->PrecioCompra         = $request->get('PrecioCompra');
-            $producto->PrecioVenta          = $request->get('PrecioVenta');
-            $producto->ImpuestosAplicables  = $request->get('ImpuestosAplicables');
-            $producto->ProveedorID          = $request->get('ProveedorID');
-            $producto->StockMinimo          = $request->get('StockMinimo');
-            $producto->StockMaximo          = $request->get('StockMaximo');
-            $producto->Estatus              = $request->get('Estatus');
+            $producto->PrecioCompra = $request->get('PrecioCompra');
+            $producto->PrecioVenta = $request->get('PrecioVenta');
+            $producto->ImpuestosAplicables = $request->get('ImpuestosAplicables');
+            $producto->ProveedorID = $request->get('ProveedorID');
+            $producto->StockMinimo = $request->get('StockMinimo');
+            $producto->StockMaximo = $request->get('StockMaximo');
+            $producto->Estatus = $request->get('Estatus');
             $producto->save();  
 
             DB::commit();
