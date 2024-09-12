@@ -43,8 +43,8 @@ class ProductosController extends Controller
             DB::beginTransaction();
 
                 $producto = new Productos([
-                'CodigoProducto'       => $request->get('CodigoProducto'),
                 'Nombre'               => $request->get('Nombre'),
+                'CodigoProducto'       => $request->get('CodigoProducto'),
                 'DescripcionDetallada' => $request->get('DescripcionDetallada'),
                 'PrecioCompra'         => $request->get('PrecioCompra'),
                 'PrecioVenta'          => $request->get('PrecioVenta'),
