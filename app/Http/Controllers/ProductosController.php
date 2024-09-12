@@ -43,8 +43,8 @@ class ProductosController extends Controller
             DB::beginTransaction();
 
                 $producto = new Productos([
-                'Nombre'               => $request->get('Nombre'),
                 'CodigoProducto'       => $request->get('CodigoProducto'),
+                'Nombre'               => $request->get('Nombre'),
                 'DescripcionDetallada' => $request->get('DescripcionDetallada'),
                 'PrecioCompra'         => $request->get('PrecioCompra'),
                 'PrecioVenta'          => $request->get('PrecioVenta'),
@@ -86,8 +86,8 @@ class ProductosController extends Controller
             DB::beginTransaction();
 
             $producto = Productos::find($request->get('productoID'));
-            $producto->Nombre               = $request->get('Nombre');
             $producto->CodigoProducto       = $request->get('CodigoProducto');
+            $producto->Nombre               = $request->get('Nombre');
             $producto->DescripcionDetallada = $request->get('DescripcionDetallada');
             $producto->PrecioCompra         = $request->get('PrecioCompra');
             $producto->PrecioVenta          = $request->get('PrecioVenta');
