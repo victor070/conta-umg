@@ -23,7 +23,7 @@
             <div class="col-lg-4 col-md-6 col-xs-12">
                 <div class="form-group">
                     <label>Codigo Producto <samp style='color:red'>*</samp></label>
-                    <input type="text" class="form-control" id="CodigoProducto" inlength="3" maxlength="8" value=""
+                    <input type="text" class="form-control" id="CodigoProducto" minlength="1" maxlength="8" value=""
                         required>
                 </div>
             </div>
