@@ -12,6 +12,7 @@
     <form method="POST" enctype="multipart/form-data" id='edit'>
         <div class="row">
             <input type="hidden" id="ProductoID" value='{{ $producto[0]->ProductoID }}'>
+
             <div class="col-lg-6 col-md-6 col-xs-12">
                 <div class="form-group">
                     <label>Nombre <samp style='color:red'>*</samp></label>
@@ -23,7 +24,7 @@
             <div class="col-lg-4 col-md-6 col-xs-12">
                 <div class="form-group">
                     <label>Codigo Producto <samp style='color:red'>*</samp></label>
-                    <input type="text" class="form-control" id="CodigoProducto" minlength="1" maxlength="8" value="{{ $producto[0]->CodigoProducto }}"
+                    <input type="text" class="form-control" id="CodigoProducto" value="{{ $producto[0]->CodigoProducto }}"
                         required>
                 </div>
             </div>
