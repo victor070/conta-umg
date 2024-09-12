@@ -30,8 +30,8 @@ $("#edit").on("submit", function (e) {
 
     var formData = {
         ProductoID: $("#ProductoID").val(),
-        Nombre: $("#Nombre").val(),
         CodigoProducto: $("#CodigoProducto").val(),
+        Nombre: $("#Nombre").val(),
         DescripcionDetallada: $("#DescripcionDetallada").val(),
         PrecioCompra: $("#PrecioCompra").val(),
         PrecioVenta: $("#PrecioVenta").val(),
