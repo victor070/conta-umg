@@ -42,3 +42,20 @@ Route::group(['prefix'=>'productos'],function(){
 	Route::post('update','ProductosController@update');
 });
 
+// Agregar las rutas para Cuentas por Cobrar
+Route::group(['prefix' => 'cuentasporcobrar'], function () {
+    Route::get('', 'CuentasPorCobrarController@index'); 
+	Route::get('new', 'CuentasPorCobrarController@new');
+    Route::post('add', 'CuentasPorCobrarController@add');
+    Route::get('edit/{ids?}', 'CuentasPorCobrarController@edit');
+    Route::post('update', 'CuentasPorCobrarController@update');
+});
+
+// Rutas para Cuentas por Pagar
+Route::group(['prefix' => 'cuentasporpagar'], function () {
+    Route::get('', 'CuentasPorPagarController@index');
+    Route::get('new', 'CuentasPorPagarController@new');
+    Route::post('add', 'CuentasPorPagarController@add');
+    Route::get('edit/{ids?}', 'CuentasPorPagarController@edit');
+    Route::post('update', 'CuentasPorPagarController@update');
+});
